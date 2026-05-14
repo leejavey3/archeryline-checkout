@@ -24,7 +24,7 @@ jobs:
       - run:
           name: Install pnpm
           command: |
-            npm install -g pnpm
+            npm install -g pnpm@11
       - run:
           name: Setup
           command: |
