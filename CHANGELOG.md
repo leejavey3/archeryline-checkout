@@ -1,3 +1,11 @@
+## [6.5.3](https://github.com/commercelayer/mfe-checkout/compare/v6.5.2...v6.5.3) (2026-05-14)
+
+
+### Bug Fixes
+
+* update `next-i18next` to latest version ([b394588](https://github.com/commercelayer/mfe-checkout/commit/b394588918bdffd2102b5a27b366db65f0bcb647))
+* update packages to latest minor ([eeb09b5](https://github.com/commercelayer/mfe-checkout/commit/eeb09b59bc2a0cd022ed9391fd18761be29504bc))
+
 ## [6.5.2](https://github.com/commercelayer/mfe-checkout/compare/v6.5.1...v6.5.2) (2026-04-30)
 
 
