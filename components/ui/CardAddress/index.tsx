@@ -6,7 +6,7 @@ interface Props {
 
 export const CardAddress: React.FC<Props> = ({ className, children }) => (
   <div
-    className={`bg-white pb-10 px-4 shadow-md rounded-md p-5 ${className || ""}`}
+    className={`rounded-md border border-gray-200 bg-white p-5 pb-10 shadow-none ${className || ""}`}
   >
     {children}
   </div>

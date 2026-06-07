@@ -21,13 +21,13 @@ export const MainHeader: FC<Props> = ({
   const { isMobile } = useDeviceDetect()
   return (
     <>
-      <div className="flex flex-row border-t mb-5 px-5 pt-5 -mx-5 md:px-0 md:-mx-0 md:mb-0 md:border-t-0 md:border-b md:pt-0 justify-between md:items-center pb-2">
+      <div className="-mx-5 mb-5 flex flex-row justify-between border-t border-gray-200 px-5 pt-5 pb-3 md:-mx-0 md:mb-0 md:items-center md:border-t-0 md:border-b md:pt-0 md:px-0">
         {/* Recap */}
         <div className="flex flex-col flex-1 justify-between md:items-center md:flex-row">
-          <h1 className="text-black font-semibold text-xl md:text-3xl">
+          <h1 className="font-display text-2xl uppercase tracking-tight text-black md:text-4xl">
             {t("general.checkoutTitle")}
           </h1>
-          <p className="font-semibold text-sm md:text-base text-gray-400">
+          <p className="text-xs font-bold uppercase tracking-[0.16em] text-gray-500 md:text-sm">
             #{orderNumber}
           </p>
         </div>

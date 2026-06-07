@@ -15,19 +15,19 @@ export const StepHeader: React.FC<Props> = ({
   stepNumber,
 }) => {
   return (
-    <div className="flex items-start mb-1.5 md:pl-0 md:mb-5">
+    <div className="mb-2 flex items-start md:mb-5 md:pl-0">
       <div>
-        <div className="flex items-center mb-0.5">
+        <div className="mb-1 flex items-center">
           <Badge status={status} stepNumber={stepNumber} />
           <h2
-            className="text-lg font-semibold leading-none pl-2"
+            className="pl-3 text-base font-extrabold uppercase leading-none tracking-[0.12em] text-black md:text-lg"
             data-testid="step-header-customer"
           >
             {label}
           </h2>
         </div>
         <div
-          className="text-gray-400 text-sm pl-8"
+          className="pl-10 text-sm leading-relaxed text-gray-500"
           data-testid="step-header-info"
         >
           <>{info}</>

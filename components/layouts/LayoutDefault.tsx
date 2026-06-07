@@ -12,9 +12,11 @@ export const LayoutDefault: FC<Props> = ({ main, aside }) => {
   return (
     <Base>
       <Container>
-        <div className="flex flex-wrap justify-end items-stretch flex-col min-h-full md:h-screen md:flex-row">
-          <div className="flex-none md:flex-1">{aside}</div>
-          <div className="flex-none md:flex-1 justify-center order-first md:order-last">
+        <div className="flex flex-col min-h-screen border-x border-gray-200 bg-white md:flex-row">
+          <div className="flex-none bg-gray-50 md:flex-1 md:border-r md:border-gray-200">
+            {aside}
+          </div>
+          <div className="flex-none order-first bg-white md:order-last md:flex-1">
             <Card fullHeight>{main}</Card>
           </div>
         </div>

@@ -1,7 +1,7 @@
 @reference "./globals.css";
 
 .payment-wrapper {
-  @apply will-change-transform text-black border border-gray-300 mb-5 p-4 rounded-sm bg-gray-50 relative transition duration-200 ease-in hover:border-gray-400 group-first:mt-6 group-last:mb-0;
+  @apply relative mb-5 rounded-md border border-gray-200 bg-white p-4 text-black transition duration-200 ease-in will-change-transform hover:border-primary group-first:mt-6 group-last:mb-0;
 }
 
 .payment-wrapper label {
@@ -9,7 +9,7 @@
 }
 
 .payment.active .payment-wrapper {
-  @apply border-2 border-primary bg-white cursor-default shadow-md;
+  @apply cursor-default border-2 border-primary bg-white shadow-none;
 }
 
 .payment.active .payment-wrapper input[type="radio"] + label {
@@ -35,11 +35,11 @@
 .payment-source-container
   .adyen-checkout__label--focused
   + .adyen-checkout__input-wrapper {
-  @apply border-primary ring ring-offset-0 ring-primary-light/50 bg-white;
+  @apply border-primary bg-white ring ring-primary-light/50 ring-offset-0;
 }
 
 .payment-source-container .braintree-hosted-fields-focused {
-  @apply border-primary ring ring-offset-0 ring-primary-light/50 bg-white;
+  @apply border-primary bg-white ring ring-primary-light/50 ring-offset-0;
 }
 
 .payment-source-container .adyen-checkout__label__text {
@@ -64,5 +64,5 @@
 
 .payment-source-container #cardAccordionContainer button,
 .payment-source-container #googlepayAccordionContainer button {
-  @apply border-black;
+  @apply border-gray-200;
 }

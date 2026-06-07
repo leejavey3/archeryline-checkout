@@ -18,8 +18,8 @@ export const StepNav: React.FC<Props> = ({
   const { t } = useTranslation()
 
   return (
-    <nav aria-label="Breadcrumb" className="mb-12 pt-2 hidden md:block">
-      <ol className="list-none p-0 inline-flex text-gray-900 text-sm font-medium">
+    <nav aria-label="Breadcrumb" className="mb-10 hidden pt-4 md:block">
+      <ol className="inline-flex list-none p-0 text-xs font-bold uppercase tracking-[0.14em] text-gray-900">
         {(steps || []).map((step, index) => {
           const isActive = step === activeStep
           const isLocked =

@@ -50,7 +50,6 @@ interface Props {
 
 const Checkout: React.FC<Props> = ({
   logoUrl,
-  primaryColor,
   orderNumber,
   companyName,
   supportEmail,
@@ -65,6 +64,7 @@ const Checkout: React.FC<Props> = ({
 }) => {
   const ctx = useContext(AppContext)
   const [isExpired, setIsExpired] = useState(false)
+  const brandPrimaryColor = "#1f3d2e"
 
   const { query } = useRouter()
 
@@ -143,7 +143,7 @@ const Checkout: React.FC<Props> = ({
       <CustomerContainer isGuest={ctx.isGuest}>
         <LayoutDefault
           aside={
-            <div className="flex flex-col min-h-full p-5 md:px-8 lg:px-12 lg:pt-10 xl:px-24 xl:pt-12 bg-gray-50">
+            <div className="flex min-h-full flex-col bg-gray-50 p-5 md:px-8 lg:px-12 lg:pt-10 xl:px-20 xl:pt-12">
               <Logo
                 logoUrl={logoUrl}
                 companyName={companyName}
@@ -236,7 +236,7 @@ const Checkout: React.FC<Props> = ({
                   isStepRequired={ctx.isPaymentRequired}
                   isStepDone={ctx.hasPaymentMethod}
                 >
-                  <PaymentContainer primaryColor={primaryColor}>
+                  <PaymentContainer primaryColor={brandPrimaryColor}>
                     <PlaceOrderContainer
                       options={{
                         paypalPayerId,

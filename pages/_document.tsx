@@ -18,12 +18,12 @@ class AppDocument extends Document {
         <Head>
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link
-            href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
             rel="stylesheet"
           />
           <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
         </Head>
-        <body className="antialiased font-medium bg-gray-50">
+        <body className="antialiased font-medium bg-gray-50 text-black">
           <Main />
           <NextScript />
         </body>

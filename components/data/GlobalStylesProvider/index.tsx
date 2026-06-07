@@ -7,6 +7,10 @@ interface GlobalStyleProps {
 
 const GlobalStylesProvider: React.FC<GlobalStyleProps> = ({ primaryColor }) => {
   useEffect(() => {
+    if (process.env.NEXT_PUBLIC_USE_COMMERCE_LAYER_THEME !== "true") {
+      return
+    }
+
     const root = document.documentElement
     if (primaryColor) {
       root.style.setProperty("--primary-h", `${primaryColor.h}`)

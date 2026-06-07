@@ -22,20 +22,20 @@ export const PaymentContainer = ({ primaryColor, children }: Props) => {
           options: {
             appearance: {
               colorAction: primaryColor,
-              colorBorder: "#E6E7E7",
+              colorBorder: "#D8D0C5",
               colorFormBackground: "#fff",
-              colorFormBorder: "#E6E7E7",
-              colorPrimary: "#30313d",
+              colorFormBorder: "#D8D0C5",
+              colorPrimary: "#1A1A1A",
               colorOutline: "var(--primary-light)",
               label: {
-                fontFamily: "Manrope, sans-serif",
+                fontFamily: "Inter, sans-serif",
                 fontSize: "14px",
                 fontWeight: 400,
               },
               input: {
-                fontFamily: "monospace",
+                fontFamily: "Inter, sans-serif",
                 fontSize: "14px",
-                fontWeight: 700,
+                fontWeight: 600,
               },
             },
           },
@@ -92,14 +92,18 @@ export const PaymentContainer = ({ primaryColor, children }: Props) => {
           fonts: [
             {
               cssSrc:
-                "https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap",
+                "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap",
             },
           ],
           appearance: {
             theme: "stripe",
             variables: {
               colorPrimary: primaryColor,
-              fontFamily: "Manrope, sans-serif",
+              colorText: "#1A1A1A",
+              colorBackground: "#FFFFFF",
+              colorDanger: "#CC5156",
+              borderRadius: "6px",
+              fontFamily: "Inter, sans-serif",
               fontWeightBold: "700",
             },
             rules: {
@@ -108,11 +112,11 @@ export const PaymentContainer = ({ primaryColor, children }: Props) => {
                 color: "#000",
               },
               ".Tab, .Input, .Block, .CheckboxInput, .CodeInput": {
-                boxShadow: "0 1px 2px 0 rgba(0, 0, 0, 0.05);",
-                borderColor: "#E6E7E7",
+                boxShadow: "none",
+                borderColor: "#D8D0C5",
               },
               ".Input": {
-                backgroundColor: "#f8f8f8",
+                backgroundColor: "#FFFFFF",
               },
               ".Input:focus": {
                 backgroundColor: "#fff",
@@ -121,13 +125,13 @@ export const PaymentContainer = ({ primaryColor, children }: Props) => {
                 borderColor: "var(--colorPrimary)",
               },
               ".BlockDivider": {
-                backgroundColor: "#ebebeb",
+                backgroundColor: "#D8D0C5",
               },
               ".Tab, .Tab:hover, .Tab:focus": {
                 border: "0",
               },
               ".Tab--selected, .Tab--selected:hover": {
-                backgroundColor: "#f360a6",
+                backgroundColor: "#1f3d2e",
                 color: "#fff",
               },
             },

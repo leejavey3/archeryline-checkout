@@ -4,7 +4,12 @@ import type { FC } from "react"
 
 export const LineItemWrapper: FC<React.HTMLAttributes<HTMLDivElement>> = (
   props,
-) => <div {...props} className="flex flex-row mb-7 pb-6 border-b" />
+) => (
+  <div
+    {...props}
+    className="mb-7 flex flex-row border-b border-gray-200 pb-6"
+  />
+)
 
 export const LineItemDescription: FC<React.HTMLAttributes<HTMLDivElement>> = (
   props,
@@ -19,7 +24,7 @@ export const LineItemQty: FC<React.HTMLAttributes<HTMLDivElement>> = (
 ) => (
   <div
     {...props}
-    className="text-xs bg-gray-100 max-w-max py-1 px-2.5 rounded-sm lowercase text-gray-500 font-bold first-letter:uppercase"
+    className="max-w-max rounded-md bg-gray-100 px-2.5 py-1 text-xs font-bold lowercase text-gray-500 first-letter:uppercase"
   />
 )
 
@@ -28,7 +33,7 @@ export const LineItemFrequency: FC<React.HTMLAttributes<HTMLDivElement>> = (
 ) => (
   <div
     {...props}
-    className="mt-2 flex bg-white border border-primary text-primary lg:mt-0 text-xs max-w-max py-1 px-2.5 rounded-sm lowercase font-bold first-letter:uppercase"
+    className="mt-2 flex max-w-max rounded-md border border-primary bg-white px-2.5 py-1 text-xs font-bold lowercase text-primary first-letter:uppercase lg:mt-0"
   />
 )
 

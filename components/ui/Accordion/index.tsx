@@ -35,7 +35,7 @@ export const AccordionItem: FC<AccordionItemProps> = ({
     <div
       tabIndex={index}
       className={classNames(
-        "accordion-tab bg-white shadow-bottom mb-2 px-5 md:px-0 md:mb-0 md:shadow-none md:border-b",
+        "accordion-tab mb-2 border-b border-gray-200 bg-white px-5 shadow-none md:mb-0 md:px-0",
         {
           active: ctx.isActive,
           disabled: ctx.status === "disabled" || ctx.status === "skip",
@@ -45,7 +45,7 @@ export const AccordionItem: FC<AccordionItemProps> = ({
       <button
         type="button"
         data-testid={`accordion_${ctx.step.toLocaleLowerCase()}`}
-        className="accordion-header text-black relative flex w-full items-start justify-between pb-3 pt-5 cursor-pointer transition-all ease-in-out duration-100 focus:outline-hidden md:pt-6 md:pb-0"
+        className="accordion-header relative flex w-full cursor-pointer items-start justify-between pb-3 pt-5 text-black transition-all duration-100 ease-in-out focus:outline-hidden md:pt-6 md:pb-1"
         onClick={handleSelection}
       >
         <div className="transition-all ease-in-out duration-100">{header}</div>

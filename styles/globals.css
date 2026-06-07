@@ -21,6 +21,6 @@
   ::before,
   ::backdrop,
   ::file-selector-button {
-    border-color: #e6e7e7;
+    border-color: var(--archeryline-border);
   }
 }

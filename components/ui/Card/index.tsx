@@ -16,9 +16,9 @@ export const Card: FC<Props> = ({
 }) => (
   <div
     className={classNames(
-      "p-5 md:px-8 lg:px-12 lg:pt-10 xl:px-24 xl:pt-12 bg-white shadow-xs",
+      "bg-white p-5 shadow-none md:px-8 lg:px-12 lg:pt-10 xl:px-20 xl:pt-12",
       {
-        "rounded-md": rounded,
+        "rounded-lg border border-gray-200": rounded,
         "min-h-full": fullHeight,
       },
       className,

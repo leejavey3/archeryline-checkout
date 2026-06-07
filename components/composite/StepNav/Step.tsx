@@ -20,7 +20,8 @@ export const Step: FC<StepProps> = ({
         {
           "font-bold text-black": $isActive,
           "text-gray-400/50 pointer-events-none": $isLocked && !$isActive,
-          "cursor-pointer": !($isLocked && !$isActive),
+          "cursor-pointer text-gray-500":
+            !($isLocked && !$isActive) && !$isActive,
         },
         className,
       )}

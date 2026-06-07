@@ -2,17 +2,17 @@ import type { FC } from "react"
 
 export const ButtonCss = [
   // Layout
-  "items-center justify-center w-full lg:w-48",
+  "items-center justify-center w-full lg:w-56",
   // Spacing and size
-  "p-3",
+  "px-6 py-3",
   // Typography
-  "text-xs font-extrabold text-contrast",
+  "text-xs font-extrabold uppercase tracking-[0.16em] text-contrast",
   // Colors and borders
   "bg-primary border border-primary rounded-md",
   // Transitions
   "transition duration-300 ease-in",
   // Interactive states
-  "hover:bg-primary/80",
+  "hover:bg-primary/90",
   "focus:outline-hidden focus:ring-2 focus:ring-offset-2 focus:ring-primary",
   // Disabled states
   "disabled:bg-primary/50 disabled:border-primary/10",

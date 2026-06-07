@@ -1,8 +1,8 @@
 export const InputCss = [
   // Base styles
-  "text-black block w-full border-gray-300 border rounded-md shadow-xs p-3",
+  "block w-full rounded-md border border-gray-200 bg-white p-3 text-sm text-black shadow-none placeholder:text-gray-500",
   "transition duration-100 ease-in-out",
-  "focus:border-primary focus:ring-3 focus:ring-offset-0 focus:ring-primary-light/50",
+  "focus:border-primary focus:ring-2 focus:ring-offset-0 focus:ring-primary-light/50",
   "sm:text-sm",
   // Autofill styles
   "[&:-webkit-autofill]:shadow-inner",

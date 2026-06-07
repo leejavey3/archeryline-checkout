@@ -12,7 +12,7 @@ export const AddButton: React.FC<Props> = ({ dataTestId, action }) => {
     //biome-ignore lint/a11y/noStaticElementInteractions: This is a button-like elements
     <div
       data-testid={dataTestId}
-      className="w-full flex py-2 justify-center items-center text-center px-2 bg-gray-50 text-gray-400 border rounded-sm cursor-pointer hover:border-gray-400/50 transition duration-200 ease-in"
+      className="flex w-full cursor-pointer items-center justify-center rounded-md border border-gray-200 bg-gray-50 px-2 py-3 text-center text-gray-500 transition duration-200 ease-in hover:border-primary hover:text-primary"
       onClick={action}
     >
       <svg
@@ -28,7 +28,9 @@ export const AddButton: React.FC<Props> = ({ dataTestId, action }) => {
           clipRule="evenodd"
         />
       </svg>
-      <p className="text-xs pl-0.5">{t("stepCustomer.addNewAddress")}</p>
+      <p className="pl-1 text-xs font-bold uppercase tracking-[0.12em]">
+        {t("stepCustomer.addNewAddress")}
+      </p>
     </div>
   )
 }

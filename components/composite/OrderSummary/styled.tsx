@@ -6,15 +6,20 @@ export const Wrapper: FC<React.HTMLAttributes<HTMLDivElement>> = (props) => (
 
 export const SummaryHeader: FC<React.HTMLAttributes<HTMLDivElement>> = (
   props,
-) => <div {...props} className="mb-12" />
+) => <div {...props} className="mb-8 border-b border-gray-200 pb-6" />
 
 export const SummaryTitle: FC<React.HTMLAttributes<HTMLHeadingElement>> = (
   props,
-) => <h2 {...props} className="text-xl text-black font-semibold" />
+) => (
+  <h2
+    {...props}
+    className="font-display text-2xl uppercase tracking-tight text-black"
+  />
+)
 
 export const SummarySubTitle: FC<React.HTMLAttributes<HTMLParagraphElement>> = (
   props,
-) => <p {...props} className="text-gray-400" />
+) => <p {...props} className="mt-1 text-sm text-gray-500" />
 
 export const TotalWrapper: FC<React.HTMLAttributes<HTMLDivElement>> = (
   props,
@@ -31,7 +36,7 @@ export const AmountSpacer: FC<React.HTMLAttributes<HTMLDivElement>> = (
 export const RecapLine: FC<React.HTMLAttributes<HTMLDivElement>> = (props) => (
   <div
     {...props}
-    className={`flex flex-row justify-between py-0.5 text-black ${!props.children ? "hidden" : ""}`}
+    className={`flex flex-row justify-between py-1.5 text-sm text-black ${!props.children ? "hidden" : ""}`}
   />
 )
 
@@ -44,7 +49,7 @@ export const RecapLineTotal: FC<React.HTMLAttributes<HTMLDivElement>> = (
 ) => (
   <div
     {...props}
-    className={`flex flex-row justify-between py-0.5 text-black border-t border-gray-400 mt-7 pt-6 ${!props.children ? "hidden" : ""}`}
+    className={`mt-7 flex flex-row justify-between border-t border-gray-200 pt-6 text-black ${!props.children ? "hidden" : ""}`}
   />
 )
 
