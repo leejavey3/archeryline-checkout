@@ -5,6 +5,18 @@ const nextBuildId = require("next-build-id")
 const shouldAnalyzeBundles = process.env.ANALYZE === "true"
 const checkoutBasePath = process.env.NEXT_PUBLIC_BASE_PATH || "/checkout"
 
+const generateBuildId = () => {
+  if (process.env.VERCEL_GIT_COMMIT_SHA) {
+    return process.env.VERCEL_GIT_COMMIT_SHA
+  }
+
+  try {
+    return nextBuildId({ dir: __dirname })
+  } catch {
+    return process.env.VERCEL_DEPLOYMENT_ID || `manual-${Date.now()}`
+  }
+}
+
 /** @type { import('next').NextConfig } */
 let nextConfig = {
   reactStrictMode: true,
@@ -13,7 +25,7 @@ let nextConfig = {
   poweredByHeader: false,
   // When when app is exported as SPA and served in a sub-folder
   assetPrefix: `${checkoutBasePath}/`,
-  generateBuildId: () => nextBuildId({ dir: __dirname }),
+  generateBuildId,
 }
 
 // rewrite rules affect only development mode, since Next router will return 404 for paths that only exist in react-router
