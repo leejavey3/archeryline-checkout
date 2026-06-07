@@ -4,9 +4,11 @@ import { BrowserRouter, Route, Routes } from "react-router-dom"
 import Page404 from "./404"
 import Order from "./Order"
 
+const checkoutBasePath = process.env.NEXT_PUBLIC_BASE_PATH || "/checkout"
+
 const Home: NextPage = () => {
   return (
-    <BrowserRouter basename={process.env.NEXT_PUBLIC_BASE_PATH}>
+    <BrowserRouter basename={checkoutBasePath}>
       <Routes>
         <Route path="404" element={<Page404 />} />
         <Route path=":orderId" element={<Order />} />

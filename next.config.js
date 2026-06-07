@@ -3,6 +3,7 @@
 const nextBuildId = require("next-build-id")
 
 const shouldAnalyzeBundles = process.env.ANALYZE === "true"
+const checkoutBasePath = process.env.NEXT_PUBLIC_BASE_PATH || "/checkout"
 
 /** @type { import('next').NextConfig } */
 let nextConfig = {
@@ -11,9 +12,7 @@ let nextConfig = {
   distDir: "out/dist",
   poweredByHeader: false,
   // When when app is exported as SPA and served in a sub-folder
-  assetPrefix: process.env.NEXT_PUBLIC_BASE_PATH
-    ? `${process.env.NEXT_PUBLIC_BASE_PATH}/`
-    : undefined,
+  assetPrefix: `${checkoutBasePath}/`,
   generateBuildId: () => nextBuildId({ dir: __dirname }),
 }
 
